@@ -1,0 +1,99 @@
+.card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.imageBox {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.contentBox {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: var(--text-primary);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+
+  line-height: 1.5rem;
+  height: 3rem;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5rem;
+
+  background: linear-gradient(to bottom, transparent, #ffffff 90%);
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card .likeButton {
+  position: absolute;
+  top: -0.75rem;
+  left: -0.75rem;
+  z-index: 10;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background-color: white;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.card .likeButton:hover {
+  background-color: #f2f2f2;
+}
